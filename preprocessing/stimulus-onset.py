@@ -1,5 +1,4 @@
-# Script for running individual stimulus onset
-# Just for easy access now but can add to scratch in publishing repo
+# Script for getting the stimulus onset time for each recording session
 
 import os
 import numpy as np

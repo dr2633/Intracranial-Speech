@@ -1,3 +1,5 @@
+# Create wav files from the microphone channel in the electrode data
+
 import os
 import numpy as np
 import mne
@@ -49,13 +51,6 @@ for sub in subjects:
                         continue
 
                     data = mne.io.read_raw_edf(edf_path, preload=True)
-
-
-                    # # Load edf data -- resample to 1000 Hz if not already
-                    # print(f"Processing file: {edf_path}")
-                    # data = mne.io.read_raw_edf(edf_path, preload=True)
-                    # if data.info['sfreq'] != 1000:
-                    #     data.resample(1000)
 
 
                     # Get the auditory channel (assuming it's always the second channel, index 1)

@@ -1,5 +1,4 @@
-# Process the raw data (only notch filter applied)
-
+# Preprocessing for raw data (CAR)
 
 import mne
 import numpy as np

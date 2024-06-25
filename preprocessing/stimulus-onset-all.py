@@ -1,3 +1,5 @@
+# Script for getting stimulus onset from all sessions
+
 import os
 import numpy as np
 import mne
@@ -6,7 +8,7 @@ from scipy.stats import pearsonr
 import matplotlib.pyplot as plt
 from scipy.io.wavfile import read
 
-from scripts.scratch.paths import get_edf_path, get_stim_path, save_tsv_path, get_word_path
+from preprocessing.preprocessing_functions import get_stim_path, save_tsv_path, get_word_path
 
 # Parameters
 sub = "sub-08"
@@ -39,11 +41,8 @@ base_path = next((path for path in user_paths if os.path.exists(path)), None)
 
 #List all files to loop through
 session_stimuli = {
-    # 'ses-01': [ 'Jobs1', 'Jobs2', 'Jobs3'],
-    # 'ses-02': ['AttFast', 'AttSlow', 'BecFast', 'BecSlow', 'CampFast', 'CampSlow']
-    # 'ses-01': [ 'Jobs1'],
-    'ses-02': ['CampSlow']
-
+    'ses-01': [ 'Jobs1', 'Jobs2', 'Jobs3'],
+    'ses-02': ['AttFast', 'AttSlow', 'BecFast', 'BecSlow', 'CampFast', 'CampSlow']
 }
 
 runs = ['run-01']

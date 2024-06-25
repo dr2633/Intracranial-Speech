@@ -12,7 +12,7 @@ The project uses a Conda environment to manage dependencies. The environment con
 
 #### Key Dependencies
 - `mne`: For EEG data analysis.
-- `torch`, `torchaudio`, `torchvision`: For processing audio and electrode data. 
+- `torch`, `torchaudio`: For processing audio and electrode data. 
 - `pysurfer`: For visualization of neuroimaging data.
 - `openai-whisper`: For state-of-the-art speech recognition -- access to whisper for transcription. 
 - `praat-parselmouth`: For integrating the Praat software into Python for voice analysis.

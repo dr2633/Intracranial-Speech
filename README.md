@@ -41,10 +41,18 @@ To reproduce the visualization of the stimulus onset recorded in the microphone 
 Below is a figure showing the stimulus onset time extracted from a representative session:
 
 <p align="middle">
-  <img src="figures/sub-01_ses-01_Jobs2_run-01_onset.jpg" width="100%" />
+  <img src="figures/sub-01_ses-01_Jobs2_run-01_onset.jpg" width="70%" />
 </p>
 
 ****
+
+#### Word and Phoneme Evoked Response
+
+<p align="middle">
+  <img align="top" src="figures/70-150Hz/word-evoked-sub-03-ses-02-BecSlow-run-01.jpg" width="45%" />
+  <img align="top" src="figures/70-150Hz/phoneme-evoked-sub-03-ses-02-AttFast-run-01.jpg" width="45%" />
+</p>
+
 
 A 2-second sine wave was played at the beginning of each speech segment to facilitate alignment of neural responses to stimulus onset. The tone onset recorded in the microphone channel was correlated with the corresponding wav file used to identify and store the precise stimulus onset time for each presentation. This method for correlating the wav file with the microphone channel recording is particularly useful in neuroscience research using ecologically valid and complex speech stimuli 
 
@@ -53,16 +61,26 @@ A 2-second sine wave was played at the beginning of each speech segment to facil
 **Audio Features**
 
 
+<p align="middle">
+  <img align="top" src="figures/F0-Spectrogram.png" width="45%" />
+  <img align="top" src="figures/Intensity-Waveform.png" width="45%" />
+</p>
+
+
 **Language Features**
 
 
-#### Preprocessing 
+<p align="middle">
+  <img align="top" src="figures/Jobs1_embeddings_sentence.png" width="45%" />
+  <img align="top" src="figures/Jobs1_entropy_sentence.png" width="45%" />
+</p>
 
-**Stimulus Onset**
+**Features in CCA with Electrode Recordings**
 
-**Word Evoked Response**
+<p align="middle">
+  <img src="figures/Jobs1-feature-plot.jpg" width="70%" />
+</p>
 
-**Phoneme Evoked Response**
 
 
 

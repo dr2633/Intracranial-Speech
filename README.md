@@ -23,12 +23,19 @@ The project uses a Conda environment to manage dependencies. The environment con
    ```bash
    conda update -n base -c defaults conda
 
+#### Preprocessing 
 
-#### Stimuli 
+The raw sEEG recordings are preprocessed using a pipeline implemented leveraging the MNE-Python library \autocite{gramfort2014}. 
 
-Our study used a set of speech stimuli, presented in two separate sessions. Speeches were divided into approximately five-minute segments, with some segments played at the original speed and others at an accelerated rate (1.25x speed). 
+1. First, we resample the electrode data from 10,000 Hz to 1,000 Hz.
+2. We save the microphone channel from the raw data, convert it to a wav file, and transcribe the microphone recording using Whisper for both listening and speaking sessions \autocite{radford2022}.
+3. We extract the stimulus onset time by correlating the stimulus with audio recorded in the channel.
+4. For each trial, we visually inspect that the stimulus onset time extracted from the channel corresponds with the raw audio used in stimulus presentation. 
 
-In this repository, we provide a single stimuli used in the experiment. An excerpt from a Steve Jobs speech as a wav file along with text transcription derived from Whisper. 
+#### Stimulus Onset Time
+
+
+
 
 ****
 

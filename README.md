@@ -23,19 +23,26 @@ The project uses a Conda environment to manage dependencies. The environment con
    ```bash
    conda update -n base -c defaults conda
 
-#### Preprocessing 
+### Preprocessing 
 
-The raw sEEG recordings are preprocessed using a pipeline implemented leveraging the MNE-Python library \autocite{gramfort2014}. 
+The raw sEEG recordings are preprocessed using a pipeline implemented leveraging the MNE-Python library. Here are the initial key steps: 
 
-1. First, we resample the electrode data from 10,000 Hz to 1,000 Hz.
-2. We save the microphone channel from the raw data, convert it to a wav file, and transcribe the microphone recording using Whisper for both listening and speaking sessions \autocite{radford2022}.
-3. We extract the stimulus onset time by correlating the stimulus with audio recorded in the channel.
-4. For each trial, we visually inspect that the stimulus onset time extracted from the channel corresponds with the raw audio used in stimulus presentation. 
-
-#### Stimulus Onset Time
+1. **Resampling the Electrode Data**: The electrode data is initially resampled from 10,000 Hz to 1,000 Hz. 
+2. **Audio Extraction and Transcription**: The microphone channel from the raw data is saved, coverted to a `.wav` file and then transcribed using Whisper to capture both listening and speaking sessions.
+3. **Stimulus Onset Time Extraction**: We extract the stimulus onset time by correlating the stimulus with the audio recorded in the channel. We save the the stimulus onset time in an events `.tsv` file in accordance with BIDS. 
+4. **Visual Inspection**: For each trial, we visually inspect that the stimulus onset time extracted from the microphone channel corresponds with the raw audio used in stimulus presentation.    
 
 
+#### Visualizing Stimulus Onset Time
 
+
+To reproduce the visualization of the stimulus onset recorded in the microphone channel, run [stimulus_onset_time.py](stimulus_onset_time.py).
+
+Below is a figure showing the stimulus onset time extracted from a representative session:
+
+<p align="middle">
+  <img src="figures/sub-01_ses-01_Jobs2_run-01_onset.jpg" width="100%" />
+</p>
 
 ****
 
@@ -60,10 +67,3 @@ A 2-second sine wave was played at the beginning of each speech segment to facil
 
 
 
-
-<p align="middle">
-  <img align="top" src="results/real_data_ablations/Student-Teacher/unablated.png" width="45%" />
-  <img align="top" src="results/real_data_ablations/California%20Housing/unablated.png" width="45%" />
-  <img align="top" src="results/real_data_ablations/Diabetes/unablated.png" width="45%" />
-  <img align="top" src="results/real_data_ablations/WHO%20Life%20Expectancy/unablated.png" width="45%" />
-</p>

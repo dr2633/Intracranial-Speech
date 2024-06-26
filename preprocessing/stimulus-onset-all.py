@@ -8,7 +8,6 @@ from scipy.stats import pearsonr
 import matplotlib.pyplot as plt
 from scipy.io.wavfile import read
 
-from preprocessing.preprocessing_functions import get_stim_path, save_tsv_path, get_word_path
 
 # Parameters
 sub = "sub-08"
@@ -228,6 +227,8 @@ for ses, stims in session_stimuli.items():
                 print(f"TSV saved to {save_as_tsv(tsv_path, onset_time, wav_duration, sub, ses, stim, run)}")
             else:
                 print("Skipping TSV creation due to invalid EDF file.")
+
+
             #
             # # Call the function
             # onset_time = stim_onset_time(sub=sub, stim=stim, ses=ses, run=run, edf_path=edf_path,

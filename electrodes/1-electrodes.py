@@ -1,9 +1,11 @@
+# Convert electrode information into BIDS format
+
 import pandas as pd
 
 # Parameters
 sub = 'sub-08'
 ses = 'ses-01'
-s_num = 'S24_224_TN'
+s_num = 'S24_224_TN' # Original subject name
 
 base_path = '/Users/derekrosenzweig/Documents/GitHub/iEEG-Speech'
 

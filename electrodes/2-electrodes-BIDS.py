@@ -1,4 +1,3 @@
-# Step 2: Make electrodes TSV BIDS compatible
 # Add required column names and store TSV in BIDS BOX folder
 
 import pandas as pd

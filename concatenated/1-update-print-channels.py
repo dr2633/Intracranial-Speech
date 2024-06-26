@@ -23,8 +23,8 @@ base_path = f'/Users/derekrosenzweig/Documents/GitHub/iEEG-Speech/derivatives/in
 # Create an empty list to store file paths
 file_paths = []
 
-# Create a for loop that gets files for sub = 'sub-01' through 'sub-07'
-for i in range(2, 9):  # Iterate through sub-01 to sub-07
+# For loop through participants with both sessions
+for i in range(2, 9):
     if i == 4 and ses == 'ses-02':
         continue
     sub = f'sub-{i:02d}'

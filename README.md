@@ -41,6 +41,12 @@ Below is a figure showing the stimulus onset time extracted from a representativ
 
 #### Word and Phoneme Evoked Response
 
+
+To reproduce the visualization of evoked response to word and phoneme onset, run [preprocessing-filtered-data.py](preprocessing-filtered-data.py).
+
+Below are figures showing evoked response to word onsets (averaged response across all words) and evoked response to phoneme onsets (averaged response across all phonemes) in an individual participant over the course of a single trial.
+
+
 <p align="middle">
   <img align="top" src="figures/70-150Hz/word-evoked-sub-03-ses-02-BecSlow-run-01.jpg" width="45%" />
   <img align="top" src="figures/70-150Hz/phoneme-evoked-sub-03-ses-02-AttFast-run-01.jpg" width="45%" />
@@ -51,6 +57,8 @@ Below is a figure showing the stimulus onset time extracted from a representativ
 ### Annotations 
 
 **Audio Features**
+
+
 
 <p align="middle">
   <img align="top" src="figures/F0-Spectrogram.png" width="45%" />

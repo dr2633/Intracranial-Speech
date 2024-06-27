@@ -45,7 +45,6 @@ Below is a figure showing the stimulus onset time extracted from a representativ
   <img src="figures/sub-01_ses-01_Jobs2_run-01_onset.jpg" width="70%" />
 </p>
 
-****
 
 #### Word and Phoneme Evoked Response
 
@@ -54,6 +53,7 @@ Below is a figure showing the stimulus onset time extracted from a representativ
   <img align="top" src="figures/70-150Hz/phoneme-evoked-sub-03-ses-02-AttFast-run-01.jpg" width="45%" />
 </p>
 
+**** 
 
 ### Annotations 
 

@@ -1,4 +1,4 @@
-## sEEG Speech Decoding Project 
+## Stereotactic Electroencephalography (sEEG) Speech Project
 
 This repository contains code and data for preprocessing and analyzing stereotactic electroencephalography (sEEG) data aligned with audio and language features in a speech task. 
 

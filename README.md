@@ -23,7 +23,7 @@ The project uses a Conda environment to manage dependencies. The environment con
    ```bash
    conda update -n base -c defaults conda
 
-### Preprocessing 
+#### Preprocessing 
 
 The raw sEEG recordings are preprocessed using a pipeline implemented leveraging the MNE-Python library. Here are the initial key steps: 
 
@@ -32,6 +32,7 @@ The raw sEEG recordings are preprocessed using a pipeline implemented leveraging
 3. **Stimulus Onset Time Extraction**: We extract the stimulus onset time by correlating the stimulus with the audio recorded in the channel. We save the the stimulus onset time in an events `.tsv` file in accordance with BIDS. 
 4. **Visual Inspection**: For each trial, we visually inspect that the stimulus onset time extracted from the microphone channel corresponds with the raw audio used in stimulus presentation.    
 
+****
 
 #### Visualizing Stimulus Onset Time
 
@@ -54,12 +55,9 @@ Below is a figure showing the stimulus onset time extracted from a representativ
 </p>
 
 
-A 2-second sine wave was played at the beginning of each speech segment to facilitate alignment of neural responses to stimulus onset. The tone onset recorded in the microphone channel was correlated with the corresponding wav file used to identify and store the precise stimulus onset time for each presentation. This method for correlating the wav file with the microphone channel recording is particularly useful in neuroscience research using ecologically valid and complex speech stimuli 
-
-#### Annotations 
+### Annotations 
 
 **Audio Features**
-
 
 <p align="middle">
   <img align="top" src="figures/F0-Spectrogram.png" width="45%" />
@@ -68,7 +66,6 @@ A 2-second sine wave was played at the beginning of each speech segment to facil
 
 
 **Language Features**
-
 
 <p align="middle">
   <img align="top" src="figures/Jobs1_embeddings_sentence.png" width="45%" />

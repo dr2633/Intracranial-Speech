@@ -23,7 +23,7 @@ The project uses a Conda environment to manage dependencies. The environment con
    ```bash
    conda update -n base -c defaults conda
 
-#### Preprocessing 
+### Preprocessing 
 
 The raw sEEG recordings are preprocessed using a pipeline implemented leveraging the MNE-Python library. Here are the initial key steps: 
 

@@ -27,16 +27,10 @@ The project uses a Conda environment to manage dependencies. The environment con
 
 The raw sEEG recordings are preprocessed using a pipeline implemented leveraging the MNE-Python library. Here are the initial key steps: 
 
-1. **Resampling the Electrode Data**: The electrode data is initially resampled from 10,000 Hz to 1,000 Hz. 
-2. **Audio Extraction and Transcription**: The microphone channel from the raw data is saved, coverted to a `.wav` file and then transcribed using Whisper to capture both listening and speaking sessions.
-3. **Stimulus Onset Time Extraction**: We extract the stimulus onset time by correlating the stimulus with the audio recorded in the channel. We save the the stimulus onset time in an events `.tsv` file in accordance with BIDS. 
-4. **Visual Inspection**: For each trial, we visually inspect that the stimulus onset time extracted from the microphone channel corresponds with the raw audio used in stimulus presentation.    
-
 
 #### Visualizing Stimulus Onset Time
 
-
-To reproduce the visualization of the stimulus onset recorded in the microphone channel, run [stimulus_onset_time.py](stimulus_onset_time.py).
+To reproduce the visualization of the stimulus onset recorded in the microphone channel, run [stimulus-onset.py](stimulus-onset.py).
 
 Below is a figure showing the stimulus onset time extracted from a representative session:
 
@@ -44,42 +38,60 @@ Below is a figure showing the stimulus onset time extracted from a representativ
   <img src="figures/sub-01_ses-01_Jobs2_run-01_onset.jpg" width="70%" />
 </p>
 
+A 2-second sine wave was played at the beginning of each speech segment to facilitate alignment of neural responses to stimulus onset. The tone onset recorded in the microphone channel was correlated with the corresponding wav file used to identify and store the precise stimulus onset time for each presentation. This method for correlating the wav file with the microphone channel recording is particularly useful in neuroscience research using ecologically valid stimuli.  
+
+
 ****
 
 #### Word and Phoneme Evoked Response
+
+To visualize evoked response to word and phoneme onsets in the stimulus, run [preprocessing-filtered-data.py](preprocessing-filtered-data.py)
+
+Below is a figure showing the work evoked response (left) and phoneme evoked response (right) for a representative participant in a single trial. 
 
 <p align="middle">
   <img align="top" src="figures/70-150Hz/word-evoked-sub-03-ses-02-BecSlow-run-01.jpg" width="45%" />
   <img align="top" src="figures/70-150Hz/phoneme-evoked-sub-03-ses-02-AttFast-run-01.jpg" width="45%" />
 </p>
 
-
-A 2-second sine wave was played at the beginning of each speech segment to facilitate alignment of neural responses to stimulus onset. The tone onset recorded in the microphone channel was correlated with the corresponding wav file used to identify and store the precise stimulus onset time for each presentation. This method for correlating the wav file with the microphone channel recording is particularly useful in neuroscience research using ecologically valid and complex speech stimuli 
+****
 
 #### Annotations 
 
 **Audio Features**
 
+We extract two features from the raw audio: fundamental frequency (Hz) and sound intensity (dB).
 
 <p align="middle">
   <img align="top" src="figures/F0-Spectrogram.png" width="45%" />
   <img align="top" src="figures/Intensity-Waveform.png" width="45%" />
 </p>
 
+We use the audio features to identify and localize electrodes maximally responsive in auditory processing of the stimulus. 
 
 **Language Features**
 
+We extract language features from the text transcription of the speeches: GPT-2 Embeddings (5 Principal Components of eighth layer hidden activations) and GPT-2 Entropy (word-level entropy). 
 
 <p align="middle">
   <img align="top" src="figures/Jobs1_embeddings_sentence.png" width="45%" />
   <img align="top" src="figures/Jobs1_entropy_sentence.png" width="45%" />
 </p>
 
+We use language features to identify electrodes maximally responsive to language processing in the recording sessions. 
+
 **Features in CCA with Electrode Recordings**
 
 <p align="middle">
   <img src="figures/Jobs1-feature-plot.jpg" width="70%" />
 </p>
+
+
+
+1. **Resampling the Electrode Data**: The electrode data is initially resampled from 10,000 Hz to 1,000 Hz. 
+2. **Audio Extraction and Transcription**: The microphone channel from the raw data is saved, coverted to a `.wav` file and then transcribed using Whisper to capture both listening and speaking sessions.
+3. **Stimulus Onset Time Extraction**: We extract the stimulus onset time by correlating the stimulus with the audio recorded in the channel. We save the the stimulus onset time in an events `.tsv` file in accordance with BIDS. 
+4. **Visual Inspection**: For each trial, we visually inspect that the stimulus onset time extracted from the microphone channel corresponds with the raw audio used in stimulus presentation.    
 
 
 

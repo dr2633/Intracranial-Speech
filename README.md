@@ -5,7 +5,6 @@ This repository contains code and data for preprocessing and analyzing stereotac
 Intracranial data, time-resolved annotations, and stimuli are stored in Box and organized in accordance with Brain Imaging Data Structure (BIDS) format. 
 
 
-
 ### Prerequisites
 
 Before setting up the project, ensure you have Conda installed on your system. If not, you can install it from [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/products/distribution).
@@ -83,7 +82,6 @@ Below are figures showing evoked response to word onsets (averaged response acro
 **** 
 
 ### Annotations 
->>>>>>> ca24bab4e496663c0e24b2de128837963ee1dd57
 
 **Audio Features**
 

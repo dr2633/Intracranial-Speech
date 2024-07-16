@@ -1,6 +1,10 @@
-## sEEG Speech Decoding Project 
+## Stereotactic Electroencephalography (sEEG) Speech Project
 
-This repository contains code and data for preprocessing and analyzing stereotactic electroencephalography (sEEG) data aligned with audio and language features in a speech task. 
+This repository contains code and data for preprocessing and analyzing stereotactic electroencephalography (sEEG) data aligned with audio and language features in a speech task. Our study used a set of speech stimuli, presented in two separate sessions. Speeches were divided into approximately five-minute segments, with some segments played at the original speed and others at an accelerated rate (1.25x speed). 
+
+Intracranial data, time-resolved annotations, and stimuli are stored in Box and organized in accordance with Brain Imaging Data Structure (BIDS) format. 
+
+
 
 ### Prerequisites
 
@@ -23,10 +27,16 @@ The project uses a Conda environment to manage dependencies. The environment con
    ```bash
    conda update -n base -c defaults conda
 
+<<<<<<< HEAD
 ### Preprocessing 
 
 The raw sEEG recordings are preprocessed using a pipeline implemented leveraging the MNE-Python library. Here are the initial key steps: 
 
+=======
+#### Preprocessing 
+
+The raw sEEG recordings are preprocessed using a pipeline implemented leveraging the MNE-Python library.  
+>>>>>>> ca24bab4e496663c0e24b2de128837963ee1dd57
 
 #### Visualizing Stimulus Onset Time
 
@@ -38,6 +48,7 @@ Below is a figure showing the stimulus onset time extracted from a representativ
   <img src="figures/sub-01_ses-01_Jobs2_run-01_onset.jpg" width="70%" />
 </p>
 
+<<<<<<< HEAD
 A 2-second sine wave was played at the beginning of each speech segment to facilitate alignment of neural responses to stimulus onset. The tone onset recorded in the microphone channel was correlated with the corresponding wav file used to identify and store the precise stimulus onset time for each presentation. This method for correlating the wav file with the microphone channel recording is particularly useful in neuroscience research using ecologically valid stimuli.  
 
 
@@ -48,19 +59,36 @@ A 2-second sine wave was played at the beginning of each speech segment to facil
 To visualize evoked response to word and phoneme onsets in the stimulus, run [preprocessing-filtered-data.py](preprocessing-filtered-data.py)
 
 Below is a figure showing the work evoked response (left) and phoneme evoked response (right) for a representative participant in a single trial. 
+=======
+
+#### Word and Phoneme Evoked Response
+
+
+To reproduce the visualization of evoked response to word and phoneme onset, run [preprocessing-filtered-data.py](preprocessing-filtered-data.py).
+
+Below are figures showing evoked response to word onsets (averaged response across all words) and evoked response to phoneme onsets (averaged response across all phonemes) in an individual participant over the course of a single trial.
+
+>>>>>>> ca24bab4e496663c0e24b2de128837963ee1dd57
 
 <p align="middle">
   <img align="top" src="figures/70-150Hz/word-evoked-sub-03-ses-02-BecSlow-run-01.jpg" width="45%" />
   <img align="top" src="figures/70-150Hz/phoneme-evoked-sub-03-ses-02-AttFast-run-01.jpg" width="45%" />
 </p>
 
+<<<<<<< HEAD
 ****
 
 #### Annotations 
+=======
+**** 
+
+### Annotations 
+>>>>>>> ca24bab4e496663c0e24b2de128837963ee1dd57
 
 **Audio Features**
 
 We extract two features from the raw audio: fundamental frequency (Hz) and sound intensity (dB).
+
 
 <p align="middle">
   <img align="top" src="figures/F0-Spectrogram.png" width="45%" />
@@ -71,8 +99,11 @@ We use the audio features to identify and localize electrodes maximally responsi
 
 **Language Features**
 
+<<<<<<< HEAD
 We extract language features from the text transcription of the speeches: GPT-2 Embeddings (5 Principal Components of eighth layer hidden activations) and GPT-2 Entropy (word-level entropy). 
 
+=======
+>>>>>>> ca24bab4e496663c0e24b2de128837963ee1dd57
 <p align="middle">
   <img align="top" src="figures/Jobs1_embeddings_sentence.png" width="45%" />
   <img align="top" src="figures/Jobs1_entropy_sentence.png" width="45%" />

@@ -82,14 +82,12 @@ To reproduce the visualization of evoked response to word and phoneme onset, run
 
 Below are figures showing evoked response to word onsets (averaged response across all words) and evoked response to phoneme onsets (averaged response across all phonemes) in an individual participant over the course of a single trial.
 
->>>>>>> ca24bab4e496663c0e24b2de128837963ee1dd57
 
 <p align="middle">
   <img align="top" src="figures/70-150Hz/word-evoked-sub-03-ses-02-BecSlow-run-01.jpg" width="45%" />
   <img align="top" src="figures/70-150Hz/phoneme-evoked-sub-03-ses-02-AttFast-run-01.jpg" width="45%" />
 </p>
 
-<<<<<<< HEAD
 ****
 
 #### Annotations 
@@ -130,12 +128,6 @@ We use language features to identify electrodes maximally responsive to language
   <img src="figures/Jobs1-feature-plot.jpg" width="70%" />
 </p>
 
-
-
-1. **Resampling the Electrode Data**: The electrode data is initially resampled from 10,000 Hz to 1,000 Hz. 
-2. **Audio Extraction and Transcription**: The microphone channel from the raw data is saved, coverted to a `.wav` file and then transcribed using Whisper to capture both listening and speaking sessions.
-3. **Stimulus Onset Time Extraction**: We extract the stimulus onset time by correlating the stimulus with the audio recorded in the channel. We save the the stimulus onset time in an events `.tsv` file in accordance with BIDS. 
-4. **Visual Inspection**: For each trial, we visually inspect that the stimulus onset time extracted from the microphone channel corresponds with the raw audio used in stimulus presentation.    
 
 
 

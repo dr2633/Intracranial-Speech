@@ -11,7 +11,7 @@ Electrode recordings are downsampled from 1,000 to 100 Hz samples in alignment w
 
 1. We obtain canonical weights for each electrode and save these weights from highest to lowest.
 
-2.  We compute the correlation coefficient values between electrodes (for all participants and including derivatives from 70 - 150 Hz and 1 - 40 Hz) across the four distinct feature sets.
+2.  We compute the correlation coefficient values between electrodes (for all participants and including derivatives from 70-150 Hz and 1-40 Hz) across the four distinct feature sets.
    
 3. We then take the proportion of each individual weight from the total to appropriately compare normalized weights for electrode responsiveness to audio and language features.
    

@@ -8,13 +8,16 @@ Intracranial data, time-resolved annotations, and stimuli are stored in Box and 
 
 Electrode recordings are downsampled from 1,000 to 100 Hz samples in alignment with correlated feature annotations stored at every 10 ms of the stimulus.
 
-\begin{enumerate}
-    \item We obtain canonical weights for each electrode and save these weights from highest to lowest.
-    \item We compute the correlation coefficient values between electrodes (for all participants and including derivatives from 70 - 150 Hz and 1 - 40 Hz) across the four distinct feature sets.
-    \item We then take the proportion of each individual weight from the total to appropriately compare normalized weights for electrode responsiveness to audio and language features.
-    \item The dataset consists of electrodes across participants (1,116 electrodes) and nine auditory stimuli (five-minute story segments).
-    \item We concatenate the electrode recordings with 10 seconds of zero-padding between trials and then run CCA between recordings and time-resolved annotations.
-\end{enumerate}
+
+1. We obtain canonical weights for each electrode and save these weights from highest to lowest.
+
+2.  We compute the correlation coefficient values between electrodes (for all participants and including derivatives from 70 - 150 Hz and 1 - 40 Hz) across the four distinct feature sets.
+   
+3. We then take the proportion of each individual weight from the total to appropriately compare normalized weights for electrode responsiveness to audio and language features.
+   
+4. The dataset consists of electrodes across participants (1,116 electrodes) and nine auditory stimuli (five-minute story segments).
+   
+5. We concatenate the electrode recordings with 10 seconds of zero-padding between trials and then run CCA between recordings and time-resolved annotations.
 
 
 ### Prerequisites

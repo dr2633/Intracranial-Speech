@@ -100,7 +100,6 @@ A 2-second sine wave was played at the beginning of each speech segment to facil
 To visualize evoked response to word and phoneme onsets in the stimulus, run [preprocessing-filtered-data.py](preprocessing-filtered-data.py)
 
 Below is a figure showing the work evoked response (left) and phoneme evoked response (right) for a representative participant in a single trial. 
-=======
 
 #### Word and Phoneme Evoked Response
 
@@ -114,49 +113,3 @@ Below are figures showing evoked response to word onsets (averaged response acro
   <img align="top" src="figures/70-150Hz/word-evoked-sub-03-ses-02-BecSlow-run-01.jpg" width="45%" />
   <img align="top" src="figures/70-150Hz/phoneme-evoked-sub-03-ses-02-AttFast-run-01.jpg" width="45%" />
 </p>
-
-****
-
-#### Annotations 
-=======
-**** 
-
-### Annotations 
-
-**Audio Features**
-
-We extract two features from the raw audio: fundamental frequency (Hz) and sound intensity (dB).
-
-
-<p align="middle">
-  <img align="top" src="figures/F0-Spectrogram.png" width="45%" />
-  <img align="top" src="figures/Intensity-Waveform.png" width="45%" />
-</p>
-
-We use the audio features to identify and localize electrodes maximally responsive in auditory processing of the stimulus. 
-
-**Language Features**
-
-<<<<<<< HEAD
-We extract language features from the text transcription of the speeches: GPT-2 Embeddings (5 Principal Components of eighth layer hidden activations) and GPT-2 Entropy (word-level entropy). 
-
-=======
->>>>>>> ca24bab4e496663c0e24b2de128837963ee1dd57
-<p align="middle">
-  <img align="top" src="figures/Jobs1_embeddings_sentence.png" width="45%" />
-  <img align="top" src="figures/Jobs1_entropy_sentence.png" width="45%" />
-</p>
-
-We use language features to identify electrodes maximally responsive to language processing in the recording sessions. 
-
-**Features in CCA with Electrode Recordings**
-
-<p align="middle">
-  <img src="figures/Jobs1-feature-plot.jpg" width="70%" />
-</p>
-
-
-
-
-
-

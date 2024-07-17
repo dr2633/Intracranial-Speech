@@ -54,7 +54,7 @@ Electrode recordings are downsampled from 1,000 to 100 Hz samples in alignment w
 
 **Audio Features**
 
-We extract two features from the raw audio: fundamental frequency (Hz) and sound intensity (dB).
+Audio Features: Fundamental Frequency (Hz) and Sound Intensity (dB)
 
 
 <p align="middle">
@@ -62,11 +62,11 @@ We extract two features from the raw audio: fundamental frequency (Hz) and sound
   <img align="top" src="figures/Intensity-Waveform.png" width="25%" />
 </p>
 
-We use the audio features to identify and localize electrodes maximally responsive in auditory processing of the stimulus. 
+
 
 **Language Features**
 
-We extract language features from the text transcription of the speeches: GPT-2 Embeddings (5 Principal Components of eighth layer hidden activations) and GPT-2 Entropy (word-level entropy). 
+Language Features: GPT-2 Embeddings (Five Principal Components of eighth layer hidden activations) and GPT-2 Entropy  
 
 <p align="middle">
   <img align="top" src="figures/Jobs1_embeddings_sentence.png" width="25%" />

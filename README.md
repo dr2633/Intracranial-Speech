@@ -93,13 +93,6 @@ Below is a figure showing the stimulus onset time extracted from a representativ
 
 A 2-second sine wave was played at the beginning of each speech segment to facilitate alignment of neural responses to stimulus onset. The tone onset recorded in the microphone channel was correlated with the corresponding wav file used to identify and store the precise stimulus onset time for each presentation. This method for correlating the wav file with the microphone channel recording is particularly useful in neuroscience research using ecologically valid stimuli.  
 
-****
-
-#### Word and Phoneme Evoked Response
-
-To visualize evoked response to word and phoneme onsets in the stimulus, run [preprocessing-filtered-data.py](preprocessing-filtered-data.py)
-
-Below is a figure showing the work evoked response (left) and phoneme evoked response (right) for a representative participant in a single trial. 
 
 #### Word and Phoneme Evoked Response
 

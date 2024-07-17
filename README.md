@@ -29,6 +29,7 @@ Before setting up the project, ensure you have Conda installed on your system. I
 The project uses a Conda environment to manage dependencies. The environment configuration is provided in a file named `mne_flow.yml`, which includes all necessary packages such as `mne`, `torch`, and `openai-whisper`.
 
 #### Key Dependencies
+
 - `mne`: For EEG data analysis.
 - `torch`, `torchaudio`: For processing audio and electrode data. 
 - `pysurfer`: For visualization of neuroimaging data.
@@ -46,12 +47,6 @@ The project uses a Conda environment to manage dependencies. The environment con
 ### Preprocessing 
 
 The raw sEEG recordings are preprocessed using a pipeline implemented leveraging the MNE-Python library. Here are the initial key steps: 
-
-=======
-#### Preprocessing 
-
-The raw sEEG recordings are preprocessed using a pipeline implemented leveraging the MNE-Python library.  
->>>>>>> ca24bab4e496663c0e24b2de128837963ee1dd57
 
 #### Visualizing Stimulus Onset Time
 

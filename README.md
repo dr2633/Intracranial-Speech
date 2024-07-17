@@ -58,26 +58,22 @@ We extract two features from the raw audio: fundamental frequency (Hz) and sound
 
 
 <p align="middle">
-  <img align="top" src="figures/F0-Spectrogram.png" width="45%" />
-  <img align="top" src="figures/Intensity-Waveform.png" width="45%" />
+  <img align="top" src="figures/F0-Spectrogram.png" width="25%" />
+  <img align="top" src="figures/Intensity-Waveform.png" width="25%" />
 </p>
 
 We use the audio features to identify and localize electrodes maximally responsive in auditory processing of the stimulus. 
 
 **Language Features**
 
-<<<<<<< HEAD
 We extract language features from the text transcription of the speeches: GPT-2 Embeddings (5 Principal Components of eighth layer hidden activations) and GPT-2 Entropy (word-level entropy). 
 
-=======
->>>>>>> ca24bab4e496663c0e24b2de128837963ee1dd57
 <p align="middle">
-  <img align="top" src="figures/Jobs1_embeddings_sentence.png" width="45%" />
-  <img align="top" src="figures/Jobs1_entropy_sentence.png" width="45%" />
+  <img align="top" src="figures/Jobs1_embeddings_sentence.png" width="25%" />
+  <img align="top" src="figures/Jobs1_entropy_sentence.png" width="25%" />
 </p>
 
 We use language features to identify electrodes maximally responsive to language processing in the recording sessions. 
-
 
 
 ### Preprocessing 

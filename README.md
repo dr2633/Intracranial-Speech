@@ -4,27 +4,6 @@ This repository contains code and data for preprocessing and analyzing stereotac
 
 Intracranial data, time-resolved annotations, and stimuli are stored in Box and organized in accordance with Brain Imaging Data Structure (BIDS) format. 
 
-### Dataset and Analysis
-
-Electrode recordings are downsampled from 1,000 to 100 Hz samples in alignment with correlated feature annotations stored at every 10 ms of the stimulus.
-
-
-1. We obtain canonical weights for each electrode and save these weights from highest to lowest.
-
-2.  We compute the correlation coefficient values between electrodes (for all participants and including derivatives from 70-150 Hz and 1-40 Hz) across the four distinct feature sets.
-   
-3. We then take the proportion of each individual weight from the total to appropriately compare normalized weights for electrode responsiveness to audio and language features.
-   
-4. The dataset consists of electrodes across participants (1,116 electrodes) and nine auditory stimuli (five-minute story segments).
-   
-5. We concatenate the electrode recordings with 10 seconds of zero-padding between trials and then run CCA between recordings and time-resolved annotations.
-
-
-<p align="middle">
-  <img src="figures/Features-Electrodes.png" width="70%" />
-</p>
-
-
 ### Prerequisites
 
 Before setting up the project, ensure you have Conda installed on your system. If not, you can install it from [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/products/distribution).
@@ -48,6 +27,58 @@ The project uses a Conda environment to manage dependencies. The environment con
     ```bash
    conda update -n base -c defaults conda
    ```
+
+
+### Dataset and Analysis
+
+Electrode recordings are downsampled from 1,000 to 100 Hz samples in alignment with correlated feature annotations stored at every 10 ms of the stimulus.
+
+1. We obtain canonical weights for each electrode and save these weights from highest to lowest.
+
+2.  We compute the correlation coefficient values between electrodes (for all participants and including derivatives from 70-150 Hz and 1-40 Hz) across the four distinct feature sets.
+   
+3. We then take the proportion of each individual weight from the total to appropriately compare normalized weights for electrode responsiveness to audio and language features.
+   
+4. The dataset consists of electrodes across participants (1,116 electrodes) and nine auditory stimuli (five-minute story segments).
+   
+5. We concatenate the electrode recordings with 10 seconds of zero-padding between trials and then run CCA between recordings and time-resolved annotations.
+
+
+<p align="middle">
+  <img src="figures/Features-Electrodes.png" width="70%" />
+</p>
+
+
+
+### Annotations 
+
+**Audio Features**
+
+We extract two features from the raw audio: fundamental frequency (Hz) and sound intensity (dB).
+
+
+<p align="middle">
+  <img align="top" src="figures/F0-Spectrogram.png" width="45%" />
+  <img align="top" src="figures/Intensity-Waveform.png" width="45%" />
+</p>
+
+We use the audio features to identify and localize electrodes maximally responsive in auditory processing of the stimulus. 
+
+**Language Features**
+
+<<<<<<< HEAD
+We extract language features from the text transcription of the speeches: GPT-2 Embeddings (5 Principal Components of eighth layer hidden activations) and GPT-2 Entropy (word-level entropy). 
+
+=======
+>>>>>>> ca24bab4e496663c0e24b2de128837963ee1dd57
+<p align="middle">
+  <img align="top" src="figures/Jobs1_embeddings_sentence.png" width="45%" />
+  <img align="top" src="figures/Jobs1_entropy_sentence.png" width="45%" />
+</p>
+
+We use language features to identify electrodes maximally responsive to language processing in the recording sessions. 
+
+
 
 ### Preprocessing 
 

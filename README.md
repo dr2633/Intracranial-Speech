@@ -50,7 +50,7 @@ The raw sEEG recordings are preprocessed using a pipeline implemented leveraging
 
 #### Visualizing Stimulus Onset Time
 
-To reproduce the visualization of the stimulus onset recorded in the microphone channel, run [preprocessing/stimulus-onset.py](preprocessing/stimulus-onset.py).
+To reproduce the visualization of the stimulus onset recorded in the microphone channel, run [stimulus-onset.py](preprocessing/stimulus-onset.py).
 
 Below is a figure showing the stimulus onset time extracted from a representative session:
 

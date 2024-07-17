@@ -20,6 +20,11 @@ Electrode recordings are downsampled from 1,000 to 100 Hz samples in alignment w
 5. We concatenate the electrode recordings with 10 seconds of zero-padding between trials and then run CCA between recordings and time-resolved annotations.
 
 
+<p align="middle">
+  <img src="figures/Features-Electrodes.png" width="70%" />
+</p>
+
+
 ### Prerequisites
 
 Before setting up the project, ensure you have Conda installed on your system. If not, you can install it from [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/products/distribution).
@@ -58,7 +63,7 @@ Below is a figure showing the stimulus onset time extracted from a representativ
   <img src="figures/sub-01_ses-01_Jobs2_run-01_onset.jpg" width="70%" />
 </p>
 
-<<<<<<< HEAD
+
 A 2-second sine wave was played at the beginning of each speech segment to facilitate alignment of neural responses to stimulus onset. The tone onset recorded in the microphone channel was correlated with the corresponding wav file used to identify and store the precise stimulus onset time for each presentation. This method for correlating the wav file with the microphone channel recording is particularly useful in neuroscience research using ecologically valid stimuli.  
 
 ****

@@ -38,10 +38,11 @@ The project uses a Conda environment to manage dependencies. The environment con
 #### Environment Setup
 
 1. **Update Conda** (optional, but recommended):
-   ```bash
-   conda update -n base -c defaults conda
 
-<<<<<<< HEAD
+    ```bash
+   conda update -n base -c defaults conda
+   ```
+
 ### Preprocessing 
 
 The raw sEEG recordings are preprocessed using a pipeline implemented leveraging the MNE-Python library. Here are the initial key steps: 
@@ -64,7 +65,6 @@ Below is a figure showing the stimulus onset time extracted from a representativ
 
 <<<<<<< HEAD
 A 2-second sine wave was played at the beginning of each speech segment to facilitate alignment of neural responses to stimulus onset. The tone onset recorded in the microphone channel was correlated with the corresponding wav file used to identify and store the precise stimulus onset time for each presentation. This method for correlating the wav file with the microphone channel recording is particularly useful in neuroscience research using ecologically valid stimuli.  
-
 
 ****
 

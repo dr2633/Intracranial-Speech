@@ -97,7 +97,7 @@ A 2-second sine wave was played at the beginning of each speech segment to facil
 #### Word and Phoneme Evoked Response
 
 
-To reproduce the visualization of evoked response to word and phoneme onset, run [preprocessing-filtered-data.py](preprocessing-filtered-data.py).
+To reproduce the visualization of evoked response to word and phoneme onset, run [preprocessing-filtered-data.py](preprocessing/preprocessing-filtered-data.py).
 
 Below are figures showing evoked response to word onsets (averaged response across all words) and evoked response to phoneme onsets (averaged response across all phonemes) in an individual participant over the course of a single trial.
 

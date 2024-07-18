@@ -122,7 +122,7 @@ To run scripts for concatenating the data, run [concatenating.py](concatenated/c
 #### Obtaining CCA Weights 
 
 <p align="middle">
-  <img src="figures/Histogram.jpg" width="70%" />
+  <img src="figures/Histogram.png" width="70%" />
 </p>
 
 
@@ -130,5 +130,5 @@ To run scripts for concatenating the data, run [concatenating.py](concatenated/c
 
 
 <p align="middle">
-  <img src="figures/Correlation.jpg" width="70%" />
+  <img src="figures/correlation.png" width="70%" />
 </p>

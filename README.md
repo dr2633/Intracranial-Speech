@@ -57,7 +57,7 @@ Electrode recordings are downsampled from 1,000 to 100 Hz samples in alignment w
 Audio Features: Fundamental Frequency (Hz) and Sound Intensity (dB)
 
 
-<p align="middle">
+<p align="left">
   <img align="top" src="figures/F0-Spectrogram.png" width="25%" />
   <img align="top" src="figures/Intensity-Waveform.png" width="25%" />
 </p>
@@ -68,7 +68,7 @@ Audio Features: Fundamental Frequency (Hz) and Sound Intensity (dB)
 
 Language Features: GPT-2 Embeddings (Five Principal Components of eighth layer hidden activations) and GPT-2 Entropy  
 
-<p align="middle">
+<p align="left">
   <img align="top" src="figures/Jobs1_embeddings_sentence.png" width="25%" />
   <img align="top" src="figures/Jobs1_entropy_sentence.png" width="25%" />
 </p>
@@ -86,7 +86,7 @@ To reproduce the visualization of the stimulus onset recorded in the microphone 
 
 Below is a figure showing the stimulus onset time extracted from a representative session:
 
-<p align="middle">
+<p align="left">
   <img src="figures/sub-01_ses-01_Jobs2_run-01_onset.jpg" width="70%" />
 </p>
 
@@ -102,7 +102,7 @@ To reproduce the visualization of evoked response to word and phoneme onset, run
 Below are figures showing evoked response to word onsets (averaged response across all words) and evoked response to phoneme onsets (averaged response across all phonemes) in an individual participant over the course of a single trial.
 
 
-<p align="middle">
+<p align="left">
   <img align="top" src="figures/70-150Hz/word-evoked-sub-03-ses-02-BecSlow-run-01.jpg" width="45%" />
   <img align="top" src="figures/70-150Hz/phoneme-evoked-sub-03-ses-02-AttFast-run-01.jpg" width="45%" />
 </p>
@@ -121,7 +121,7 @@ To run scripts for concatenating the data, run [concatenating.py](concatenated/c
 
 #### Obtaining CCA Weights 
 
-<p align="middle">
+<p align="left">
   <img src="figures/Histogram.png" width="70%" />
 </p>
 
@@ -129,6 +129,6 @@ To run scripts for concatenating the data, run [concatenating.py](concatenated/c
 #### Correlation Between Weights Across Feature Sets 
 
 
-<p align="middle">
+<p align="left">
   <img src="figures/correlation.png" width="70%" />
 </p>

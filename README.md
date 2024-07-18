@@ -106,3 +106,29 @@ Below are figures showing evoked response to word onsets (averaged response acro
   <img align="top" src="figures/70-150Hz/word-evoked-sub-03-ses-02-BecSlow-run-01.jpg" width="45%" />
   <img align="top" src="figures/70-150Hz/phoneme-evoked-sub-03-ses-02-AttFast-run-01.jpg" width="45%" />
 </p>
+
+From the preprocessed data, we save an events file in correspondence with BIDS formatting, saving information about each trial, stimulus onset, and the structure of the data saved to derivatives. We use evoked responses as an additional check to ensure correct marking of stimulus onset time. 
+
+
+### Concatenating Data 
+
+After saving preprocessed data into derivatives in both high gamma (70 - 150 Hz) and broadband low frequency (1 - 40 Hz), we concatenate data across participants before running canonical correlation analysis (CCA) between time-resolved electrode recordings and time-resolved audio and language features. 
+
+To run scripts for concatenating the data, run [concatenating.py](concatenated/concatenating.py)
+
+### Canonical Correlation Analysis (CCA) 
+
+
+#### Obtaining CCA Weights 
+
+<p align="middle">
+  <img src="figures/histogram.jpg" width="70%" />
+</p>
+
+
+#### Correlation Between Weights Across Feature Sets 
+
+
+<p align="middle">
+  <img src="figures/correlation.jpg" width="70%" />
+</p>

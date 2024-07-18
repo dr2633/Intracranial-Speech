@@ -44,7 +44,7 @@ Electrode recordings are downsampled from 1,000 to 100 Hz samples in alignment w
 5. We concatenate the electrode recordings with 10 seconds of zero-padding between trials and then run CCA between recordings and time-resolved annotations.
 
 
-<p align="middle">
+<p align="left">
   <img src="figures/Features-Electrodes.png" width="70%" />
 </p>
 
